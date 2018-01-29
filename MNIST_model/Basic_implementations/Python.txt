@@ -1,0 +1,67 @@
+Tricks:
+
+# use sys.path.append(' _ _ _ _ _ _ _ _ ') to add a pathto your shell.
+
+# execute a .py file in python shell using execfile('_ _ _.py')
+
+# A function in a class will always have itself as an argument(Refer Zed Shaw pg. 128, 129.
+
+# use img.shape to find the dimension of any array
+
+# to get W-transpose*x, we use "" np.dot(W,X) "" - this function is for vectorized implementation for multiplication of two vectors.(Check for matrices)
+  
+Here W and X are vector so dot gives a single value
+
+# np.random.rand(x) -- this creates a 1-D array(rank 1 array) of x elements Gaussian (not a vector)
+
+# np.random.rand(x,1) -- this will create a vector.
+# np.linalg.norm(X, ord = 2, axis = ..., keepdims = True) - gets the rms value along rows or cols of X(matrix) depending on axis(1 for row(hori),0 for col(vertical)) value
+
+# np.exp() np.abs() np.sqrt() np.square()
+
+# A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix X_flatten of shape (b*c*d, a) is to use:
+
+		X_flatten = X.reshape(X.shape[0], -1).T      // X.T is the transpose of X
+		
+                this is useful when you want to flatten out images into vectors. Here a represents the image index.
+
+		After this operation, a 2-D matrix obtained where the each col is an individual image
+
+# np.dot(X,Y) to multiply matrices and vectors(be careful of dimensions)
+
+# A = np.multiply(X, Y) and then sum = np.sum(A)  - sum of individual corresponding elements of X and Y i.e. x1*y1 + x2*y2 + x3*y3....
+
+	np.multiply - element-wise multiplication X and Y are of same size
+
+# A and B are two numpy matrices of the same size (m,n) then A*B results in element wise multiplication and a matrix of size (m,n)
+
+# np.linalg.norm() -- it is used to calculate the sum of squares of elements of a matrix
+
+# X[:,j] - this indicates a particular column j and includes all the elements in that column j for a matrix X(test it)
+
+# X[:,a:b] - this will pick from col a to column (b-1). If nothing is iin place of a, then picked from starting so is the case for b
+
+# np.sum(.... , axis = 0)  (default axis is zero as the 1-D array are column vectors in np by default)
+
+# check for convert_to_one_hot() function in tensorflow
+
+
+# for list, to add use list_name.append("string" or d or f); to delete, use del list_name[element_index]
+# for dict, use dict_name["key"] = value; to delete, use del dict_name["Key"]
+# We can't delete specific elements in a tuple. We can delete it completely using the del operator. 
+# We can use len() function on all three.
+# Placeholders in strings
+# check out for i in range(0,51,5):
+
+To Do:
+
+# os, __future__, from six.moves.urllib.request import urlopen
+
+# blob library
+
+# use of enumerate() and zip()
+
+# (np_array).shape[0] 
+
+# np.zeros, np.random.uniform, np.reshape, np.sum, np.log, np.random.permutation
+# sys.stderr.write , sys.stderr.flush()

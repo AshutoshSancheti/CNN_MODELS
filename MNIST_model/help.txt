@@ -1,0 +1,20 @@
+The data has been downloaded from LeCun's website
+Refer internet sources to use the data
+To load data, run the following in the shell
+1) Load the load_mnist function in the shell
+>>> X_train, y_train = load_mnist('C:\Python27\_Machine_Learning\MNIST_dataset', kind='train')
+>>> X_test, y_test = load_mnist('C:\Python27\_Machine_Learning\MNIST_dataset', kind='t10k')
+
+now import the neuralnetwork class
+>>> net = NeuralNetMLP(n_output=10, n_features=X_train.shape[1], n_hidden=50, l2=0.1, l1=0.0, epochs=1000, eta=0.001, alpha=0.001, decrease_const=0.00001, shuffle=True, minibatches=50, random_state=1)
+>>> net.fit(X_train, y_train, print_progress = True)
+
+>>> y_train_pred = nn.predict(X_train)
+>>> acc = np.sum(y_train == y_train_pred, axis=0) / X_train.shape[0]
+>>> print('Training accuracy: %.2f%%' % (acc * 100))
+
+>>> y_test_pred = nn.predict(X_test)
+>>> acc = np.sum(y_test == y_test_pred, axis=0) / X_test.shape[0]
+>>> print('Test accuracy: %.2f%%' % (acc * 100))
+
+I obtained a training accuracy of 97% and test of 96%

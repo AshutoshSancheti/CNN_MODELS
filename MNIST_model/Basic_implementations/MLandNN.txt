@@ -1,0 +1,96 @@
+# Finished Andrew NG course.
+# Done Neural Networks and Deep learning book and writing python codes.
+# Sebastian Reschka book
+# CS231N
+
+# implementation of dropout - important
+
+# C:\Users\ashus\AppData\Local\Temp\CUDA\CUDASamples
+  
+  C:\Users\ashus\AppData\Local\Temp\CUDA\CUDASamples\bin\win64\Release
+  
+  C:\ProgramData\NVIDIA Corporation\CUDA Samples\v8.0
+  
+  Note: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin must be added to PATH environment variable
+  
+  
+  After extracting cuDNN to a folder, copy these files to the sub-directories in CUDA
+  I copied the 
+     cudnn64_5.dll (cuda\bin\cudnn64_5.dll) from that zip archive into C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\; 
+  
+     cudnn.h (cuda\include\cudnn.h) to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\; 
+  
+     and cudnn.lib(cuda\lib\x64\cudnn.lib) to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\
+
+
+
+Tricks:
+
+# To convert data into onehot encoding
+y_train = keras.utils.to_categorical(np.random.randint(10, size=(100, 1)), num_classes=10)
+
+# A trick when you want to flatten a matrix X of shape (a,b,c,d) to a matrix X_flatten of shape (b*c*d, a) is to use:
+
+		
+         X_flatten = X.reshape(X.shape[0], -1).T      // X.T is the transpose of X
+
+		
+  this is useful when you want to flatten out images into vectors. Here a represents the image index.
+		
+  After this operation, a 2-D matrix obtained where the each col is an individual image
+
+# In NN, we center our images therefore we divide the np array containing our pixel info by 255 i.e. "standardize" the data
+
+# Log. reg. classifier
+  clf = sklearn.linear_model.LogisticRegression()
+  clf.fit(X, Y)   // X is of form m*n  and Y - m*1  m-no of examples and  n-no. of features
+
+# cost = sum([data**2 for data in (y-y_current)]) / N  ; y - y_current; this function squares element-wise and adds all 
+
+# say the dataset is of the form (30000, 784) and you wnat to reshape in form of 28*28*1 images, use np.reshape(x, (-1,28,28,1))
+  You can also use tf.reshape
+
+To Do:
+# Face++ software
+# VGG Face
+# UCI Machine Learning Repository
+# AI tools - OpenAir, OpenCog, OpenIRIS, RapidMiner
+
+# sequence to sequence models(Neural machine translation, nmt) on tensorflow tutorials. the repo is "tensorflow/nmt" on GitHub
+  use "git clone https://github.com/tensorflow/nmt/"
+
+# word embeddings - word2vec, Distributed hypothesis, neural probabilistic language models, Latent semantic approach, Baroni et al
+# gpu codes, CUDA, cuDNNs
+# LSTMs, mLSTMs, GRU
+
+# Generative Adversial Networks, Autoencoders
+# FlowNet
+# Autoencoders, Reinforcement learning
+# Bayesian Generative Adversial Networks by Yunus Saatchi and andrew Gordon Wilson
+# Floydhub, cloud GPU
+# Creation of virtual environment
+# Linear and Multi-Variate Regression
+# Fuzzy Objective Function Algorithms, fuzzy-C means algorithm
+# Why L1 regularisation can lead to sparse solutions?
+# One vs Rest Approach in multiclass classification
+# KD Trees, 'minkowski' distance
+# Learn up more on decision trees and random forests(not complete in sebastian book)
+# Learning ways to use Numpy, SciKit-Learn, Theano, Matplotlib.
+# Write codes for all ML algorithms starting from Logistic regression
+# understand the plot_decision_regions code well
+
+# write code to for random search of eta and lambda(Refer 1:08:00 in lec 5 of CS231n)
+
+# Train a nn with very less data and less epoches so as to get an idea about the hyperparameters
+
+# fast.ai
+
+# Reinforcement learning - no fixed data set
+
+# Implement different kind of gradient descent
+# Learning rate decay implementation
+
+# drop connect
+# AlexNet - Image Classification with Deep CNN - paper 2012
+
+# 1:02:00 for various kinds of implementations of CNN- very important
